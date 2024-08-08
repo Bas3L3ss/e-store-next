@@ -50,6 +50,8 @@ async function ProductTable() {
     },
     orderBy: { name: "asc" },
   });
+  console.log(products);
+
   if (products.length === 0) return <p>No Products Found</p>;
   return (
     <Table>

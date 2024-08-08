@@ -3,7 +3,7 @@ import React from "react";
 
 export const dynamic = "force-dynamic";
 
-function AdminLayout({
+function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -11,14 +11,13 @@ function AdminLayout({
   return (
     <>
       <Nav>
-        <NavLink href={"/admin"}>Dashboard</NavLink>
-        <NavLink href={"/admin/products"}>Products</NavLink>
-        <NavLink href={"/admin/users"}>Customers</NavLink>
-        <NavLink href={"/admin/orders"}>Sales</NavLink>
+        <NavLink href={"/"}>Home</NavLink>
+        <NavLink href={"/products"}>Products</NavLink>
+        <NavLink href={"/orders"}>My Orders</NavLink>
       </Nav>
       <div className="container my-6">{children}</div>
     </>
   );
 }
 
-export default AdminLayout;
+export default Layout;
